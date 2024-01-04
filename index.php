@@ -4,13 +4,10 @@ include_once '_config/config.php';
 include_once '_functions/functions.php';
 include_once '_config/db.php';
 
-
 spl_autoload_register(function ($class) {
     include_once 'models/' . $class . '.php';
 });
 
-$database = new Database();
-$con = $database->dbh;
 
 if (!isset($_SESSION["login"])) {
 
