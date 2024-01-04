@@ -51,12 +51,12 @@ class User
         return false;
     }
 
-    static function register($username, $phonenumber, $email, $password,$db)
+    static function register($username, $phonenumber, $email, $password, $picture, $db)
     {
-        $sql = "INSERT INTO user (username,phonenumber,email, password) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO user (username,phonenumber,email, password, picture) VALUES (?,?, ?, ?, ?)";
         $stmt = mysqli_stmt_init($db);
         mysqli_stmt_prepare($stmt, $sql);
-        mysqli_stmt_bind_param($stmt, "ssss", $username, $phonenumber, $email, $password);
+        mysqli_stmt_bind_param($stmt, "sssss", $username, $phonenumber, $email, $password, $picture);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
         mysqli_close($db);
