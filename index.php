@@ -8,17 +8,22 @@ spl_autoload_register(function ($class) {
     include_once 'models/' . $class . '.php';
 });
 
-
 if (!isset($_SESSION["login"])) {
-
-    $page = 'login';
-
-} else if (isset($_SESSION["login"]) && isset($_GET['page']) && !empty($_GET['page'])) {
-    $page = trim(strtolower($_GET['page']));
-
+    if (isset($_GET['page'])) {
+        $allowedPages = ["login","newpassword"];
+        $page = in_array($_GET['page'], $allowedPages) ? $_GET['page'] : 'login';
+    } else {
+        $page = 'login';
+    }
 } else {
     $page = 'home';
 }
+
+// If $_GET['page'] is not set or empty, set $page to 'dashboard'
+if (empty($page)) {
+    $page = 'home';
+}
+
 
 $all_pages = scandir('controllers');
 if (in_array($page . '_controller.php', $all_pages)) {
