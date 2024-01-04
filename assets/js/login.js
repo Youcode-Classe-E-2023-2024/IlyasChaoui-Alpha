@@ -35,34 +35,42 @@ const login = document.getElementById("loginBtn");
 const sign = document.getElementById("signUp");
 
 sign.addEventListener('click', (event) => {
-
     event.preventDefault();
+
     // sign up inputs
     const userName = document.getElementById("signUpName").value;
     const phoneNumber = document.getElementById("phoneNumber").value;
     const signUpEmail = document.getElementById("signUpEmail").value;
     const signUpPassword = document.getElementById("signUpPassword").value;
+    const signUpImage = document.getElementById("imageInput").files[0]; // Get the file
     const checkBox = document.getElementById('chk');
+
+    // Create an instance of FormData
+    var formData = new FormData();
+    formData.append('username', userName);
+    formData.append('phonenumber', phoneNumber);
+    formData.append('email', signUpEmail);
+    formData.append('password', signUpPassword);
+    formData.append('picture', signUpImage); // Append the image
+    formData.append('req', 'signup');
+
 
     $.ajax({
         type: "POST",
         url: "index.php?page=login",
-        data: {
-            req: "signup",
-            username: userName,
-            phonenumber: phoneNumber,
-            email: signUpEmail,
-            password: signUpPassword
-        },
+        data: formData,
+        contentType: false, // Required for FormData
+        processData: false, // Required for FormData
         success: (data) => {
             console.log(data);
             checkBox.click();
-
-        }, error: (error) => {
+        },
+        error: (error) => {
             console.log(error);
         }
-    })
-})
+    });
+});
+
 
 
 
