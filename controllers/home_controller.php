@@ -1,11 +1,11 @@
 <?php
 
-echo '<h3>- Home Controller -</h3>';
-
-if (isset($_POST['login'])) {
-    echo 'Is login';
+if (isset($_POST['logout'])) {
+    $logout = new User($_SESSION["user_id"]);
+    $logout->logout();
 }
 
-if (isset($_POST['logout'])) {
-    echo 'Is logout';
+if($_SESSION["login"]) {
+    $userData = User::getUser($_SESSION["user_id"]);
+//    dd($userData);
 }
