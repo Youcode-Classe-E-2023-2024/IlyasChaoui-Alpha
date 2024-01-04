@@ -27,7 +27,7 @@
                 <div class="password-container">
                     <input type="password" id="loginPassword" placeholder="Password" name="password" class="input" autocomplete="off">
                 </div>
-                <button type="submit" id="loginBtn" name="login">Sign in</button>
+                <button type="button" id="loginBtn" name="login">Sign in</button>
                 <a id="forget-btn" class="forget_btn" >Forget Password?</a>
             </form>
         </div>
@@ -57,7 +57,7 @@
             <form action="index.php?page=login" method="post">
                 <label for="chk" aria-hidden="true" style="font-size: 30px">Forget Password</label>
                 <input type="email" placeholder="Enter your Email" name="email" class="input">
-                <button type="submit" name="sign">Send Email</button>
+                <button type="submit" name="request">Send Email</button>
                 <a id="login-btn" class="forget_btn" href="#">Return to login?</a>
             </form>
         </div>
