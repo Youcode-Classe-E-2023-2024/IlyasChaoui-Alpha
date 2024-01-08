@@ -29,7 +29,6 @@ class User
     {
         $_SESSION["user_id"] = $user_id;
         $_SESSION["login"] = true;
-        header('Location: index.php?page=home');
     }
 
     function logout()

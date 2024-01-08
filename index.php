@@ -8,6 +8,7 @@ spl_autoload_register(function ($class) {
     include_once 'models/' . $class . '.php';
 });
 
+
 if (!isset($_SESSION["login"])) {
     if (isset($_GET['page'])) {
         $allowedPages = ["login","newpassword"];

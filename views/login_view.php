@@ -1,6 +1,19 @@
 <link rel="stylesheet" href="<?= PATH ?>assets/css/login.css">
 
-<div class="wrapper">
+
+<div  class="hourglassBackground" style="display: none">
+    <div class="hourglassContainer">
+        <div class="hourglassCurves"></div>
+        <div class="hourglassCapTop"></div>
+        <div class="hourglassGlassTop"></div>
+        <div class="hourglassSand"></div>
+        <div class="hourglassSandStream"></div>
+        <div class="hourglassCapBottom"></div>
+        <div class="hourglassGlass"></div>
+    </div>
+</div>
+
+<div id="login" class="wrapper">
 
     <div class="main" id="login-section">
         <!-- Checkbox for triggering animations -->
@@ -31,7 +44,6 @@
                 <a id="forget-btn" class="forget_btn" >Forget Password?</a>
             </form>
         </div>
-
         <div class="login">
             <form  autocomplete="off" enctype="multipart/form-data">
                 <label for="chk" class="mb-28" aria-hidden="true">Register</label>
@@ -54,10 +66,10 @@
     </div>
     <div class="section1" id="psswd-rec-section" style="display: none">
         <div class="signup">
-            <form action="index.php?page=login" method="post">
+            <form>
                 <label for="chk" aria-hidden="true" style="font-size: 30px">Forget Password</label>
-                <input type="email" placeholder="Enter your Email" name="email" class="input">
-                <button type="submit" name="request">Send Email</button>
+                <input type="email" id="requestEmail" placeholder="Enter your Email" name="email" class="input">
+                <button type="button" id="request" name="request">Send Email</button>
                 <a id="login-btn" class="forget_btn" href="#">Return to login?</a>
             </form>
         </div>

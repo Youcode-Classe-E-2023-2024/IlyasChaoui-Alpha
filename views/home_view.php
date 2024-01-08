@@ -151,7 +151,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#"
+                        <a id="dashboard"
                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
                                 <span class="inline-flex justify-center items-center ml-4">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -165,7 +165,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a id="user"
                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
                                 <span class="inline-flex justify-center items-center ml-4">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -181,7 +181,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a id="product"
                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
                                 <span class="inline-flex justify-center items-center ml-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -195,7 +195,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a id="notification"
                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
                                 <span class="inline-flex justify-center items-center ml-4">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -234,176 +234,153 @@
         </div>
         <!-- ./Sidebar -->
 
-        <div class="h-full ml-14 mt-14 mb-10 md:ml-64">
+        <div class=" h-full ml-14 mt-14 mb-10 md:ml-64">
 
             <!-- Statistics Cards -->
-            <div class="grid grid-cols-1 mt-10 sm:grid-cols-2 lg:grid-cols-4 p-4 gap-4">
-                <div
-                        class="bg-blue-500 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-blue-600 dark:border-gray-600 text-white font-medium group">
+            <div id="dashboard_section">
+                <h2 class="font-bold text-center ml-4 mt-10">Dashboard</h2>
+                <div class="grid grid-cols-1 mt-10 sm:grid-cols-2 lg:grid-cols-4 p-4 gap-4" style="margin-left: 430px">
                     <div
-                            class="flex justify-center items-center w-14 h-14 bg-white rounded-full transition-all duration-300 transform group-hover:rotate-12">
-                        <svg width="30" height="30" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                             class="stroke-current text-blue-800 dark:text-gray-800 transform transition-transform duration-500 ease-in-out">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
-                            </path>
-                        </svg>
+                            class="bg-blue-500 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-blue-600 dark:border-gray-600 text-white font-medium group">
+                        <div
+                                class="flex justify-center items-center w-14 h-14 bg-white rounded-full transition-all duration-300 transform group-hover:rotate-12">
+                            <svg width="30" height="30" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                 class="stroke-current text-blue-800 dark:text-gray-800 transform transition-transform duration-500 ease-in-out">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                            </svg>
+                        </div>
+                        <div class="text-right">
+                            <p id="user-count" class="text-2xl">557</p>
+                            <p>Users</p>
+                        </div>
                     </div>
-                    <div class="text-right">
-                        <p class="text-2xl">1,257</p>
-                        <p>Visitors</p>
+                    <div
+                            class="bg-blue-500 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-blue-600 dark:border-gray-600 text-white font-medium group">
+                        <div
+                                class="flex justify-center items-center w-14 h-14 bg-white rounded-full transition-all duration-300 transform group-hover:rotate-12">
+                            <svg width="30" height="30" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                 class="stroke-current text-blue-800 dark:text-gray-800 transform transition-transform duration-500 ease-in-out">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                        </div>
+                        <div class="text-right">
+                            <p id="product-count" class="text-2xl">257</p>
+                            <p>Products</p>
+                        </div>
                     </div>
                 </div>
-                <div
-                        class="bg-blue-500 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-blue-600 dark:border-gray-600 text-white font-medium group">
-                    <div
-                            class="flex justify-center items-center w-14 h-14 bg-white rounded-full transition-all duration-300 transform group-hover:rotate-12">
-                        <svg width="30" height="30" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                             class="stroke-current text-blue-800 dark:text-gray-800 transform transition-transform duration-500 ease-in-out">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-                        </svg>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-2xl">557</p>
-                        <p>Orders</p>
-                    </div>
-                </div>
-                <div
-                        class="bg-blue-500 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-blue-600 dark:border-gray-600 text-white font-medium group">
-                    <div
-                            class="flex justify-center items-center w-14 h-14 bg-white rounded-full transition-all duration-300 transform group-hover:rotate-12">
-                        <svg width="30" height="30" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                             class="stroke-current text-blue-800 dark:text-gray-800 transform transition-transform duration-500 ease-in-out">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                        </svg>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-2xl">$11,257</p>
-                        <p>Sales</p>
-                    </div>
-                </div>
-                <div
-                        class="bg-blue-500 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-blue-600 dark:border-gray-600 text-white font-medium group">
-                    <div
-                            class="flex justify-center items-center w-14 h-14 bg-white rounded-full transition-all duration-300 transform group-hover:rotate-12">
-                        <svg width="30" height="30" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                             class="stroke-current text-blue-800 dark:text-gray-800 transform transition-transform duration-500 ease-in-out">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-                            </path>
-                        </svg>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-2xl">$75,257</p>
-                        <p>Balances</p>
-                    </div>
-                </div>
+
             </div>
             <!-- Client Table -->
-            <div class="mt-4 mx-4">
-                <h2 class="font-bold mb-10">Recent Users</h2>
+            <div id="user_section" class=" mt-4 mx-4">
+                <h2 class="font-bold mt-10 text-center mb-10">All Users</h2>
                 <div class="w-full overflow-hidden rounded-lg shadow-xs">
                     <div class="w-full overflow-x-auto">
+                        <!-- Modal toggle -->
+                        <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
+                                class="block mb-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                type="button">
+                            Add user
+                        </button>
+
+                        <!-- Main modal -->
+                        <div id="formsContainer" class="flex flex-col"
+                             style="display: flex;flex-direction: column;gap: 20px;">
+                            <div id="crud-modal" tabindex="-1" aria-hidden="true"
+                                 class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                                <div class="relative p-4 w-full max-w-md max-h-full">
+                                    <!-- Modal content -->
+                                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                        <!-- Modal header -->
+                                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                                                Create New Product
+                                            </h3>
+                                            <button type="button"
+                                                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                                    data-modal-toggle="crud-modal">
+                                                <svg class="w-3 h-3" aria-hidden="true"
+                                                     xmlns="http://www.w3.org/2000/svg"
+                                                     fill="none" viewBox="0 0 14 14">
+                                                    <path stroke="currentColor" stroke-linecap="round"
+                                                          stroke-linejoin="round" stroke-width="2"
+                                                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                                </svg>
+                                                <span class="sr-only">Close modal</span>
+                                            </button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <form id="productForm" class="user-form p-4 md:p-5">
+                                            <div id="Parent_form" class="flex flex-col">
+                                                <div class="grid gap-4 mb-4 grid-cols-2">
+                                                    <div class="col-span-2">
+                                                        <label for="name"
+                                                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+                                                        <input type="text" name="full_name" id="name"
+                                                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                                               placeholder="Type product name">
+                                                    </div>
+                                                    <div class="col-span-2">
+                                                        <label for="description"
+                                                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product
+                                                            Description</label>
+                                                        <input id="description" rows="4" name="email" type="email"
+                                                               class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                               placeholder="Write product description here">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-row justify-between">
+                                                <button id="addNewUser" type="button" onclick="addNewForm()"
+                                                        class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                    <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor"
+                                                         viewBox="0 0 20 20"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd"
+                                                              d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                                                              clip-rule="evenodd"></path>
+                                                    </svg>
+                                                    Add new user
+                                                </button>
+                                                <hr>
+                                                <button type="button" id="user-submit-btn"
+                                                        class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                    <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor"
+                                                         viewBox="0 0 20 20"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd"
+                                                              d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                                                              clip-rule="evenodd"></path>
+                                                    </svg>
+                                                    Save
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                         <table class="w-full">
                             <thead>
                             <tr
                                     class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                                 <th class="px-4 py-3">Name</th>
                                 <th class="px-4 py-3">Email</th>
-                                <th class="px-4 py-3">Adress</th>
+                                <th class="px-4 py-3">Address</th>
                                 <th class="px-4 py-3">Phone</th>
                                 <th class="px-4 py-3">Website</th>
                                 <th class="px-4 py-3">Company</th>
+                                <th class="px-4 py-3">Operations</th>
+
 
                             </tr>
                             </thead>
-                            <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-                            <tr
-                                    class="bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <div>
-                                            <p class="font-semibold">Leanne Graham</p>
-                                            <p class="text-xs text-gray-600 dark:text-gray-400">Bret
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="px-4 py-3 text-sm">Sincere@april.biz</td>
-                                <td class="px-4 py-3 text-xs">Kulas Light</td>
-                                <td class="px-4 py-3 text-sm">1-770-736-8031 x56442</td>
-                                <td class="px-4 py-3 text-sm">hildegard.org</td>
-                                <td class="px-4 py-3 text-sm">Romaguera-Crona</td>
-                            <tr
-                                    class="bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <div>
-                                            <p class="font-semibold">Leanne Graham</p>
-                                            <p class="text-xs text-gray-600 dark:text-gray-400">Bret
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="px-4 py-3 text-sm">Sincere@april.biz</td>
-                                <td class="px-4 py-3 text-xs">Kulas Light</td>
-                                <td class="px-4 py-3 text-sm">1-770-736-8031 x56442</td>
-                                <td class="px-4 py-3 text-sm">hildegard.org</td>
-                                <td class="px-4 py-3 text-sm">Romaguera-Crona</td>
-                            </tr>
-                            <tr
-                                    class="bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <div>
-                                            <p class="font-semibold">Leanne Graham</p>
-                                            <p class="text-xs text-gray-600 dark:text-gray-400">Bret
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="px-4 py-3 text-sm">Sincere@april.biz</td>
-                                <td class="px-4 py-3 text-xs">Kulas Light</td>
-                                <td class="px-4 py-3 text-sm">1-770-736-8031 x56442</td>
-                                <td class="px-4 py-3 text-sm">hildegard.org</td>
-                                <td class="px-4 py-3 text-sm">Romaguera-Crona</td>
-                            </tr>
-                            <tr
-                                    class="bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <div>
-                                            <p class="font-semibold">Leanne Graham</p>
-                                            <p class="text-xs text-gray-600 dark:text-gray-400">Bret
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="px-4 py-3 text-sm">Sincere@april.biz</td>
-                                <td class="px-4 py-3 text-xs">Kulas Light</td>
-                                <td class="px-4 py-3 text-sm">1-770-736-8031 x56442</td>
-                                <td class="px-4 py-3 text-sm">hildegard.org</td>
-                                <td class="px-4 py-3 text-sm">Romaguera-Crona</td>
-                            </tr>
-                            <tr
-                                    class="bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center text-sm">
-                                        <div>
-                                            <p class="font-semibold">Leanne Graham</p>
-                                            <p class="text-xs text-gray-600 dark:text-gray-400">Bret
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="px-4 py-3 text-sm">Sincere@april.biz</td>
-                                <td class="px-4 py-3 text-xs">Kulas Light</td>
-                                <td class="px-4 py-3 text-sm">1-770-736-8031 x56442</td>
-                                <td class="px-4 py-3 text-sm">hildegard.org</td>
-                                <td class="px-4 py-3 text-sm">Romaguera-Crona</td>
-                            </tr>
+                            <tbody id="users-list-section"
+                                   class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800 userscontainer">
                             </tbody>
                         </table>
                     </div>
@@ -419,128 +396,17 @@
             <!-- Card product -->
 
             <!-- component -->
-            <h2 class="font-bold ml-4 mt-10">Recent Products</h2>
-            <div class="h-96 flex items-center justify-center">
-                <div class="grid grid-cols-12 gap-2 gap-y-4 max-w-6xl">
+            <div id="product_section" class="mt-10 flex items-center flex-col justify-center">
+                <h2 class="font-bold ml-4 mt-10 mb-10">All Products</h2>
+                <div id="products-list-section" class="grid grid-cols-12 gap-2 gap-y-4 max-w-6xl">
 
-                    <!-- Video 1 -->
-                    <div class="col-span-12 sm:col-span-6 md:col-span-3">
-                        <card class="w-full flex flex-col">
-                            <div class="relative">
-
-                                <!-- Image Video -->
-                                <a href="#">
-                                    <img src="https://picsum.photos/seed/59/300/200" class="w-96 h-auto"/>
-                                </a>
-
-                                <p class="absolute right-2 bottom-2 bg-gray-900 text-gray-100 text-xs px-1 py">1:15</p>
-                            </div>
-
-                            <div class="flex flex-row mt-2 gap-2">
-
-
-                                <!-- Description -->
-                                <div clas="flex flex-col">
-                                    <a href="#">
-                                        <p class="text-black dark:text-white text-sm font-semibold">Learn CSS Box Model
-                                            in 8 Minutes</p>
-                                    </a>
-                                </div>
-
-                            </div>
-                        </card>
-                    </div>
-
-                    <!-- Video 2 -->
-                    <div class="col-span-12 sm:col-span-6 md:col-span-3">
-                        <card class="w-full flex flex-col">
-                            <div class="relative">
-
-                                <!-- Image Video -->
-                                <a href="#">
-                                    <img src="https://picsum.photos/seed/60/300/200" class="w-96 h-auto"/>
-                                </a>
-
-                                <p class="absolute right-2 bottom-2 bg-gray-900 text-gray-100 text-xs px-1 py">1:15</p>
-                            </div>
-
-                            <div class="flex flex-row mt-2 gap-2">
-
-
-                                <!-- Description -->
-                                <div clas="flex flex-col">
-                                    <a href="#">
-                                        <p class="text-black dark:text-white text-sm font-semibold">Learn CSS Box Model
-                                            in 8 Minutes</p>
-                                    </a>
-                                </div>
-
-                            </div>
-                        </card>
-                    </div>
-
-                    <!-- Video 3 -->
-                    <div class="col-span-12 sm:col-span-6 md:col-span-3">
-                        <card class="w-full flex flex-col">
-                            <div class="relative">
-
-                                <!-- Image Video -->
-                                <a href="#">
-                                    <img src="https://picsum.photos/seed/22/300/200" class="w-96 h-auto"/>
-                                </a>
-
-                                <p class="absolute right-2 bottom-2 bg-gray-900 text-gray-100 text-xs px-1 py">1:15</p>
-                            </div>
-
-                            <div class="flex flex-row mt-2 gap-2">
-
-
-                                <!-- Description -->
-                                <div clas="flex flex-col">
-                                    <a href="#">
-                                        <p class="text-black dark:text-white text-sm font-semibold">Learn CSS Box Model
-                                            in 8 Minutes</p>
-                                    </a>
-                                </div>
-
-                            </div>
-                        </card>
-                    </div>
-
-                    <!-- Video 4 -->
-                    <div class="col-span-12 sm:col-span-6 md:col-span-3">
-                        <card class="w-full flex flex-col">
-                            <div class="relative">
-
-                                <!-- Image Video -->
-                                <a href="#">
-                                    <img src="https://picsum.photos/seed/90/300/200" class="w-96 h-auto"/>
-                                </a>
-
-                                <p class="absolute right-2 bottom-2 bg-gray-900 text-gray-100 text-xs px-1 py">1:15</p>
-                            </div>
-
-                            <div class="flex flex-row mt-2 gap-2">
-
-
-                                <!-- Description -->
-                                <div clas="flex flex-col">
-                                    <a href="#">
-                                        <p class="text-black dark:text-white text-sm font-semibold">Learn CSS Box Model
-                                            in 8 Minutes</p>
-                                    </a>
-                                </div>
-
-                            </div>
-                        </card>
-                    </div>
                 </div>
             </div>
 
             <!-- Card product -->
 
             <!-- Contact Form -->
-            <div class="mt-8 mx-4">
+            <div class="hidden mt-8 mx-4">
                 <div class="grid grid-cols-1 md:grid-cols-2">
                     <div class="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
                         <h1
@@ -611,7 +477,7 @@
             <!-- ./Contact Form -->
 
             <!-- External resources -->
-            <div class="mt-8 mx-4">
+            <div class="hidden mt-8 mx-4">
                 <div
                         class="p-4 bg-blue-50 dark:bg-gray-800 dark:text-gray-50 border border-blue-500 dark:border-gray-500 rounded-lg shadow-md">
                     <h4 class="text-lg font-semibold">Have taken ideas & reused components from the following
