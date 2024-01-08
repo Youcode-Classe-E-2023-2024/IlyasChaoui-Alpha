@@ -19,7 +19,7 @@ if (isset($_POST["products"])) {
     $dataArray = json_decode($data, true);
 
     // Limit the number of items
-    $limit = 12; // Adjust the limit as needed
+    $limit = 100; // Adjust the limit as needed
     $limitedData = array_slice($dataArray, 0, $limit);
 
     // Encode the limited data back to JSON
