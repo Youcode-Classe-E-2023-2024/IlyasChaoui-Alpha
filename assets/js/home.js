@@ -253,25 +253,70 @@ function deleteUser(id) {
         type: "DELETE",
         url: `https://jsonplaceholder.typicode.com/users/${id}`,
         success: (data, status) => {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                }
+            });
+            Toast.fire({
+                icon: "success",
+                title: "User deleted successfully"
+            });
             console.log(status);
             // addToNotification("User Deleted: Farewell, User Removed Successfully");
         }
     })
 }
 
+const openModalButton = document.getElementById('openModalButton');
+const modal = document.getElementById('crud-modal');
+const closeButton = document.getElementById('close');
+document.addEventListener('DOMContentLoaded', (event) => {
+
+    openModalButton.addEventListener('click', function() {
+        modal.style.display = 'block';
+    });
+
+    closeButton.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+});
+
 function addUser(name, email) {
     $.post(
         "https://jsonplaceholder.typicode.com/users",
-        {
-            name,
-            email
-        },
+        { name, email },
         (data, status) => {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                }
+            });
+
+            Toast.fire({
+                icon: "success",
+                title: "User added successfully"
+            });
+
+            // Programmatically click the close button to close the modal
             console.log(status);
-            // addToNotification("User Added Successfully: Your Newest Addition is Now Live!");
+            // Additional code (e.g., addToNotification) can go here
         }
     )
 }
+
 
 function addMultipleUsers(infoArray) {
     infoArray.forEach((info) => {
@@ -282,16 +327,21 @@ function addMultipleUsers(infoArray) {
 const userSubmitBtn = document.getElementById("user-submit-btn");
 
 userSubmitBtn.addEventListener('click', function () {
+    closeButton.click();
+
     // Gather data from all user forms and submit
     console.log("test");
     var userForms = document.querySelectorAll('.user-form');
     var formData = [];
 
-    userForms.forEach(function (form) {
+    userForms.forEach(function (form, index) {
         var fullName = form.querySelector('[name="full_name"]').value;
         var email = form.querySelector('[name="email"]').value;
+        console.log("Form " + index + ": ", fullName, email);
         formData.push({name: fullName, email: email});
     });
+
+    console.log("All FormData: ", formData);
     addMultipleUsers(formData);
 });
 
@@ -300,11 +350,11 @@ let par = document.getElementById("Parent_form");
 
 function addNewForm() {
     let form = `
-        <div class="form grid gap-4 mb-4 grid-cols-2">
+        <div class="form user-form grid gap-4 mb-4 grid-cols-2">
                                                     <div class="col-span-2">
                                                         <label for="name"
                                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
-                                                        <input type="text" name="name" id="name"
+                                                        <input type="text" name="full_name"
                                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                                                placeholder="Type product name" >
                                                     </div>
@@ -313,9 +363,9 @@ function addNewForm() {
                                                         <label for="description"
                                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product
                                                             Description</label>
-                                                        <textarea id="description" rows="4"
+                                                        <input type="email" name="email" rows="4"
                                                                   class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                                  placeholder="Write product description here"></textarea>
+                                                                  placeholder="Write product description here">
                                                     </div>
                                                     <div class="flex-initial pl-3">
                                                     <a class="button remove-article-btn">Remove</a>
@@ -338,6 +388,46 @@ function addNewForm() {
         }
     });
 }
+
+$(document).ready(function () {
+    // Fetch both posts and users data
+    $.when(
+        $.ajax({
+            url: 'https://jsonplaceholder.typicode.com/posts',
+            dataType: 'json'
+        }),
+        $.ajax({
+            url: 'https://jsonplaceholder.typicode.com/users',
+            dataType: 'json'
+        })
+    ).done(function (postsData, usersData) {
+        const postsNumber = postsData[0].length;
+        const usersNumber = usersData[0].length;
+
+        // Create a bar chart
+        const options = {
+            chart: {
+                type: 'bar',
+                height: 350
+            },
+            series: [{
+                name: 'Posts',
+                data: [postsNumber]
+            }, {
+                name: 'Users',
+                data: [usersNumber]
+            }],
+            xaxis: {
+                categories: ['Posts', 'Users']
+            }
+        };
+
+        const chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    }).fail(function (error) {
+        //console.error('Error fetching data:', error);
+    });
+});
 
 
 
