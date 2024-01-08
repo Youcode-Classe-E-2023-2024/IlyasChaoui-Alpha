@@ -68,7 +68,7 @@ function getUsers() {
             userCount.innerText = users.length;
             users.forEach((user) => {
                 usersListSection.innerHTML += `
-        <tr
+                             <tr
                                     class="bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 text-gray-700 dark:text-gray-400">
                                 <td class="px-4 py-3">
                                     <div class="flex items-center text-sm">
@@ -85,89 +85,18 @@ function getUsers() {
                                 <td class="px-4 py-3 text-sm">${user.website}</td>
                                 <td class="px-4 py-3 text-sm">${user.company.name}</td>
                                 <td class="px-4 py-3 text-sm">
-                                    <div class="flex justify-around p-2">
-                     <div  class="edit-user cursor-pointer w-auto h-auto"  data-user-id="${user.id}" data-user-name="${user.name}" data-user-email="${user.email}">
-                                    <div id="authentication-modal" tabindex="-1" aria-hidden="true"
-                                 class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                                <div class="relative p-4 w-full max-w-md max-h-full">
-                                    <!-- Modal content -->
-                                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                                        <!-- Modal header -->
-                                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                                Sign in to our platform
-                                            </h3>
-                                            <button type="button"
-                                                    class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                                                    data-modal-hide="authentication-modal">
-                                                <svg class="w-3 h-3" aria-hidden="true"
-                                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                                                    <path stroke="currentColor" stroke-linecap="round"
-                                                          stroke-linejoin="round" stroke-width="2"
-                                                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                                                </svg>
-                                                <span class="sr-only">Close modal</span>
-                                            </button>
-                                        </div>
-                                        <!-- Modal body -->
-                                        <div class="p-4 md:p-5">
-                                            <form class="space-y-4" action="#">
-                                                <div>
-                                                    <label for="email"
-                                                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
-                                                        email</label>
-                                                    <input type="email" name="email" id="email"
-                                                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                           placeholder="name@company.com" required>
-                                                </div>
-                                                <div>
-                                                    <label for="password"
-                                                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
-                                                        password</label>
-                                                    <input type="password" name="password" id="password"
-                                                           placeholder="••••••••"
-                                                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                           required>
-                                                </div>
-                                                <div class="flex justify-between">
-                                                    <div class="flex items-start">
-                                                        <div class="flex items-center h-5">
-                                                            <input id="remember" type="checkbox" value=""
-                                                                   class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
-                                                                   required>
-                                                        </div>
-                                                        <label for="remember"
-                                                               class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember
-                                                            me</label>
-                                                    </div>
-                                                    <a href="#"
-                                                       class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost
-                                                        Password?</a>
-                                                </div>
-                                                <button type="submit"
-                                                        class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                                    Login to your account
-                                                </button>
-                                                <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                                                    Not registered? <a href="#"
-                                                                       class="text-blue-700 hover:underline dark:text-blue-500">Create
-                                                        account</a>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                    
                         <div class="flex-1 h-full"> 
                           <div class="flex items-center justify-center flex-1 h-full p-2 border border-blue-800 text-white shadow rounded-lg">
                             <div class="relative">
-                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-800" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
-                              </svg>
+                              <button class="edit-user" data-user-id="${user.id}" data-user-name="${user.name}" data-user-email="${user.email}" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-800" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                                </svg>
+                               </button>
                             </div>
                           </div>
                         </div>
-                    </div>
                      <button  data-user-id="${user.id}" class="delete-User inline-flex items-center w-20 px-2 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-md">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
@@ -181,13 +110,21 @@ function getUsers() {
             $(document).ready(function () {
                 // Edit product click event
                 $('.edit-user').click(function () {
+                    console.log("test");
                     clickedUserID = $(this).data('user-id');
                     let username = $(this).data('user-name');
                     let userEmail = $(this).data('user-email');
-                    // editUserFormContainer.classList.remove("hidden");
+                    document.getElementById("EditContainer").classList.remove("hidden");
+                    console.log(document.getElementById("formsContainer").classList);
+                    const nameInput = document.getElementById("edit-full_name");
+                    const emailInput = document.getElementById("edit-email");
                     // usersContainer.classList.add("hidden");
-                    name.value = username;
-                    email.value = userEmail;
+                    nameInput.value = username;
+                    emailInput.value = userEmail;
+                });
+                $('#sedha').click(function () {
+                    console.log("test");
+                    document.getElementById("EditContainer").classList.add("hidden");
                 });
 
                 // Delete product click event
@@ -200,10 +137,13 @@ function getUsers() {
     })
 }
 
+console.log(document.getElementById("formsContainer").classList);
+
 getUsers();
 
 const productsListSection = document.getElementById("products-list-section");
 const productCount = document.getElementById("product-count");
+
 function getProducts() {
     $.ajax({
         type: "POST",
@@ -277,21 +217,12 @@ function deleteUser(id) {
 const openModalButton = document.getElementById('openModalButton');
 const modal = document.getElementById('crud-modal');
 const closeButton = document.getElementById('close');
-document.addEventListener('DOMContentLoaded', (event) => {
 
-    openModalButton.addEventListener('click', function() {
-        modal.style.display = 'block';
-    });
-
-    closeButton.addEventListener('click', function() {
-        modal.style.display = 'none';
-    });
-});
 
 function addUser(name, email) {
     $.post(
         "https://jsonplaceholder.typicode.com/users",
-        { name, email },
+        {name, email},
         (data, status) => {
             const Toast = Swal.mixin({
                 toast: true,
@@ -350,6 +281,7 @@ let par = document.getElementById("Parent_form");
 
 function addNewForm() {
     let form = `
+<hr class="w-full mb-10 mt-10 dark:border-gray-500 border-2">
         <div class="form user-form grid gap-4 mb-4 grid-cols-2">
                                                     <div class="col-span-2">
                                                         <label for="name"
@@ -368,7 +300,29 @@ function addNewForm() {
                                                                   placeholder="Write product description here">
                                                     </div>
                                                     <div class="flex-initial pl-3">
-                                                    <a class="button remove-article-btn">Remove</a>
+                                             
+                                                    <button
+  class="flex  remove-article-btn justify-center items-center gap-2 w-28 h-12 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-gradient-to-r from-[#fb7185] via-[#e11d48] to-[#be123c] hover:shadow-xl hover:shadow-red-500 hover:scale-105 duration-300 hover:from-[#be123c] hover:to-[#fb7185]"
+>
+  <svg viewBox="0 0 15 15" class="w-5 fill-white">
+    <svg
+      class="w-6 h-6"
+      stroke="currentColor"
+      stroke-width="1.5"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+      ></path>
+    </svg>
+    Button
+  </svg>
+</button>
+
                                                 </div>   
                                                 </div>
                                                                                              
@@ -430,6 +384,43 @@ $(document).ready(function () {
 });
 
 
+function editUser(name, email, id) {
+    $.ajax({
+        type: "PUT",
+        url: `https://jsonplaceholder.typicode.com/users/${id}`,
+        data: {
+            name,
+            email
+        },
+        success: (data, status) => {
+            console.log(status);
 
+        }
+    })
+}
+
+const editUserBtn = document.getElementById("user-edit-submit-btn");
+
+const name = document.getElementById("edit-full_name");
+const email = document.getElementById("edit-email");
+editUserBtn.addEventListener("click", () => {
+    document.getElementById("EditContainer").classList.add("hidden");
+    editUser(name.value, email.value, clickedUserID);
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+        }
+    });
+    Toast.fire({
+        icon: "success",
+        title: "User edited successfully"
+    });
+})
 
 
