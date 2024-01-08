@@ -8,8 +8,8 @@
         <!-- Header -->
         <div class="fixed w-full flex items-center  justify-between h-14 text-white z-10">
             <div
-                    class="flex items-center justify-start md:justify-center pl-3 w-14 md:w-64 h-28 bg-blue-800 dark:bg-gray-800 border-none">
-                LOGO
+                    class="flex items-center justify-start md:justify-center pl-3 z-20 w-14 md:w-64 h-28 bg-blue-800 dark:bg-gray-800 border-none">
+                <img src="./assets/img/Alpha%20Tech%20Logo.gif" class="mr-20" alt="" style="margin-left: -10px">
             </div>
             <div class="flex items-center mt-6 h-20 bg-blue-800 dark:bg-gray-800 header-right">
                 <!-- component -->
